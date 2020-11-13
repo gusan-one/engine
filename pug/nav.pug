@@ -1,0 +1,32 @@
+nav(class="navbar navbar-expand-sm navbar-light bg-light" style="z-index:2000")
+	|
+	a(class="navbar-brand" href="/") igoos
+	|
+	button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+		span(class="navbar-toggler-icon")
+	|
+	div(class="collapse navbar-collapse" id="main_menu" style="text-align:center")
+		ul(class="navbar-nav mr-auto")
+			li(class="nav-item active")
+				a(class="nav-link" href="me") Профиль
+					span(class="sr-only")
+			|
+			li(class="nav-item dropdown")
+				a(class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Приложения
+				|
+				div(class="dropdown-menu" aria-labelledby="navbarDropdown")
+					a(class="dropdown-item" href="/online") Онлайн Трэкер
+					a(class="dropdown-item" href="/hidden") Поиск Скрытых
+					div(class="dropdown-divider")
+					a(class="dropdown-item" href="/map") Карта Связей
+			|
+			//-li(class="nav-item")
+			//-a(class="nav-link disabled" href="#") Disabled
+
+		|
+		|
+		form(class="form-inline my-2 my-lg-0" width="200px")
+			div(width="200px" style="margin:0,auto;margin:0 auto")
+				//span(class="glyphicon glyphicon-align-left" aria-hidden="true")
+				input(readonly disabled class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="s" )
+				button(disabled class="btn btn-outline-success my-2 my-sm-0" type="submit") Поиск 

@@ -1,0 +1,17 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+# And gtfo
+#
+#
+#
+node_modules/
+settings.js
+sftp-config.json
+node/package-lock.json
+package-lock.json
+**/~$*
+#
+#
+#
+.svn/
+.vscode/
+#

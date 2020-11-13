@@ -1,0 +1,27 @@
+extends ../main.pug
+
+
+block page_head_scripts
+	script.
+		console.log('home.pug > page_head_scripts');
+
+	
+block page
+	div.container-fluid
+		div.row
+			div.col-sm-2
+			div.col-sm-8
+				div#target_select
+				div#target_selectT(class="alert alert-success" role="alert" style="margin-top:20px")
+				div#container lorem
+			div.col-sm-2
+
+block page_footer_scripts
+	script.
+		console.log('----------- home.pug > page_footer_scripts ------------');
+
+		$(document).ready(function() {
+			console.log( "$(document).ready > home.pug > page_footer_scripts" );
+
+
+		});
