@@ -1,16 +1,7 @@
 var settings = require('./settings.js');
+var exapp = require('./modules/express_app3.js');
 var api = require('./api.js');
 var router = require('./router.js');
-
-var mongo = require('./modules/mongo_connect7.js')
-// mongo({db:'db_name'}).then(db=>{
-// 	var some_tbl = db.collection('sometable');
-// 	some_tbl.insertOne({ololo:"atata"})
-// })
-
-
-var exapp = require('./modules/express_app3.js');
-
 
 exapp(settings).then(app=>{
 

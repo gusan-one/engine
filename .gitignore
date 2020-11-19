@@ -6,7 +6,6 @@
 node_modules/
 settings.js
 sftp-config.json
-node/package-lock.json
 package-lock.json
 **/~$*
 #

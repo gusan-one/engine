@@ -1,3 +1,11 @@
+var mongo = require('./modules/mongo_connect7.js')
+// mongo({db:'db_name'}).then(db=>{
+// 	var some_tbl = db.collection('sometable');
+// 	some_tbl.insertOne({ololo:"atata"})
+// })
+
+
+
 module.exports = function(app){
 
 	// client must set application-json content type
