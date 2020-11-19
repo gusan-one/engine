@@ -1,4 +1,6 @@
 var settings = require('./settings.js');
+var api = require('./api.js');
+var router = require('./router.js');
 
 var mongo = require('./modules/mongo_connect7.js')
 // mongo({db:'db_name'}).then(db=>{
@@ -22,34 +24,8 @@ exapp(settings).then(app=>{
 	});
 
 
-	// client must set application-json ct
-	app.post("/echo", function (req, res, next) {
-		console.log("POST.data:", {
-			body: req.body,
-			headers: req.headers
-		})
-		res.status(200).json({response:{
-			echo: req.body,
-			ololo:'atata',
-			headers: req.headers
-		}});
-	})
-
-
-	app.get('/', function (req, res, next) {
-		console.log("req")
-		res.render('pages/home.pug', { 
-			title: 'Main Page'
-		});
-	});
-
-	app.get('/about', function (req, res, next) {
-		res.render('pages/about.pug', { 
-			title: 'About Page'
-		});
-	});
-
-
+	api(app)
+	router(app)
 
 	// Это нужно поместить в конец, чтобы перехватить запрос и дать 404
 	// Если не один из предыдущих запросов не сработал
